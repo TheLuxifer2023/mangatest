@@ -94,9 +94,7 @@ class Downloader:
         option.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36')
         option.add_argument("--app=%s" % self.str_to_data_uri('Manga_downloader'))
         option.add_argument('--headless')
-
         option.binary_location = r"Chrome-bin\chrome.exe"  # Update this path
-      
         self.driver = uc.Chrome(options=option)
         self.driver.set_window_size(self.res[0], self.res[1])
         viewport_dimensions = self.driver.execute_script("return [window.innerWidth, window.innerHeight];")
